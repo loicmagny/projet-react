@@ -2,9 +2,9 @@
 
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Home from "./components/home.js";
-import About from "./components/about.js";
-import Contact from "./components/contact.js";
+import Home from "./pages/home.js";
+import About from "./pages/about.js";
+import Contact from "./pages/contact.js";
 
 class App extends Component {
 	render() {
