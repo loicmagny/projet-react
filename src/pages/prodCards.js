@@ -9,7 +9,7 @@ export default function SoloProd(props) {
 
 	useEffect(() => {
 		axios
-			.get(`http://976e-93-5-98-154.ngrok.io/${props.match.params.slug}`)
+			.get(`https://5f72-176-162-49-41.ngrok.io/products/${props.match.params.slug}`)
 			.then((res) => {
 				setProd(res.data);
 				setLoading(false);
@@ -18,6 +18,28 @@ export default function SoloProd(props) {
 				console.log(err.message);
 			});
 	}, [props.match.params.slug]);
+
+	// // const { parseMultipartData, sanitizeEntity } = require('strapi-utils');
+
+	// module.exports = {
+	// /**
+	//  * Create a record.
+	//  *
+	//  * @return {Object}
+	//  */
+
+	// async create(ctx) {
+	// 	let entity;
+	// 	if (ctx.is('multipart')) {
+	// 	const { data, files } = parseMultipartData(ctx);
+	// 	entity = await strapi.services.restaurant.create(data, { files });
+	// 	} else {
+	// 	entity = await strapi.services.restaurant.create(ctx.request.body);
+	// 	}
+	// 	return sanitizeEntity(entity, { model: strapi.models.restaurant });
+	// },
+	// };
+
 	return loading ? (
 		<p>Chargement en cours</p>
 	) : (
@@ -27,14 +49,14 @@ export default function SoloProd(props) {
 			</nav>
 			<div>
 				<img
-					src={`http://976e-93-5-98-154.ngrok.io/${prod.image.url}`}
+					src={`https://5f72-176-162-49-41.ngrok.io/products${prod.image.url}`}
 					alt={prod.alternativeText}
 				/>
 				<h3>{prod.title}</h3>
 				<p>Status: {prod.price}</p>
 				<p>Species: {prod.description}</p>
 				<p>Quantité : 1</p>
-				<button>Passer commande</button>
+				<button>Ajouter au panier</button>
 			</div>
 		</div>
 	);

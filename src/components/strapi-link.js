@@ -7,7 +7,7 @@ export default function ProductList() {
 	const [loading, setLoading] = useState(true);
 	const [prods, setProds] = useState([]);
 	useEffect(() => {
-		getAxiosData("https://976e-93-5-98-154.ngrok.io/products").then((resp) => {
+		getAxiosData("https://5f72-176-162-49-41.ngrok.io/products").then((resp) => {
 			setProds(resp.data);
 			setLoading(false);
 		});

@@ -6,7 +6,7 @@ export default function ProdsCard({ prod }) {
 		<div>
 			<Link to={`/products/${prod.slug}`} key={prod.slug}>
 				<img
-					src={`http://localhost:1337${prod.image.url}`}
+					src={`https://5f72-176-162-49-41.ngrok.io${prod.image.url}`}
 					alt={prod.image.alternativeText}
 				/>
 				<p>{prod.title}</p>
