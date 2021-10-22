@@ -1,0 +1,34 @@
+footer{
+    text-align: center;
+    background-color: $secondarybg;
+    width: 100%;
+    border-top: solid 5px $maincolor;
+    
+
+}
+footer > div:nth-child(3){
+    text-align: right;
+}
+footer > div:nth-child(1){
+    text-align: left;
+}
+footer > div:nth-child(2){
+    text-align: center;
+}
+
+.footersection{
+    padding: 2%;
+    @include flexRow();
+    justify-content: space-between;
+
+    
+    & > div:nth-child(3){
+        text-align: right;
+    }
+    & > div:nth-child(1){
+        text-align: left;
+    }
+    & > div:nth-child(2){
+        text-align: center;
+    }
+}

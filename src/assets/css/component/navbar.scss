@@ -1,13 +1,45 @@
+header{
+    background-color: $secondarybg;
+    padding: 1%;
+    border-bottom: solid 5px $maincolor;
+}
+
 .navbar{
-    
+    margin-right: auto;
+    width: 100%;
+    @include flexRow();
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    ul:nth-child(2){
+        margin-left: auto;
+        justify-content: flex-end;
+        li:nth-child(1){
+            margin-right: 2rem;
+        }
+    }
     
     &__list{
+        padding: 0;
+        width: 100%;
         list-style-type: none;
-        display: flex;
-        flex-direction: row;
+        @include flexRow();
+        justify-content: space-between;
+        align-items: center;
+
+        li:nth-child(1){
+            text-align: center;
+        }
 
         &__logo{
-
+            
+            img{
+                width: 50%;
+            }
+            &__second{
+                width: 50%;
+            }
         }
     }
 }

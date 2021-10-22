@@ -8,16 +8,18 @@ import Services from "../pages/services.js";
 import Config from "../pages/config.js";
 import SoloProd from "../pages/prodCards.js";
 import SignIn from "../pages/signin.js";
+import logo from "../assets/img/logo.svg";
+import account from "../assets/img/account.svg";
+import cart from "../assets/img/cart.svg";
 
 export default function Header(props) {
 	return (
 		<Router>
-			<div>
-				<h2>Bienvenue</h2>
+			<header>
 				<nav className="navbar">
 					<ul className="navbar__list">
 						<li className="navbar__list__logo">
-							<img src="" alt="" />
+							<img src={logo} alt="" />
 						</li>
 						<li>
 							<Link to={"/"} className="nav-link">
@@ -44,19 +46,20 @@ export default function Header(props) {
 								A Propos
 							</Link>
 						</li>
+					</ul>
+					<ul className="navbar__list">
 						<li>
-							<Link to={"/signin"} className="nav-link">
-								Inscription
+							<Link to={"/cart"} className="nav__link">
+								<img src={cart} alt="" className="navbar__list__logo__second"/>
 							</Link>
 						</li>
 						<li>
-							<Link to={"/cart"} className="nav-link">
-								Panier
+							<Link to={"/signin"} className="nav__link">
+								<img src={account} alt="" className="navbar__list__logo__second"/>
 							</Link>
 						</li>
 					</ul>
 				</nav>
-				<hr />
 				<Switch>
 					<Route path="/" exact {...props} component={Home} />
 					<Route path="/products" exact {...props} component={Products} />
@@ -67,7 +70,7 @@ export default function Header(props) {
 					<Route path="/contact" exact {...props} component={Contact} />
 					<Route path="/products/:slug" exact {...props} component={SoloProd} />
 				</Switch>
-			</div>
+			</header>
 		</Router>
 	);
 }
