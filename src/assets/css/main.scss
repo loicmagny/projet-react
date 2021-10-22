@@ -6,6 +6,7 @@
 @import "computer";
 @import "config";
 @import "home";
+@import "signin";
 @import "peripherique";
 @import "./component/alerte";
 @import "./component/card";
@@ -19,6 +20,7 @@ html{
 *{
     margin: 0;
     padding: 0;
+    color: $textcolor;
 }
 a{
     color: $textcolor;

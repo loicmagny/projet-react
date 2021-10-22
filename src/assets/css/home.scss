@@ -1,0 +1,51 @@
+.homeSection{
+ @include flexCol();
+
+
+    // Startup slider
+    &__slider{
+        width: 100%;
+        position: relative;
+        // Parent mis en relatif pour afficher le text sur l'image
+        &__img{
+            width: 100%;
+            
+        }
+
+        &__text{
+            position: absolute;
+            // Place le text sur l'image
+            margin-top: 10%;
+            margin-left: 2%;
+            // Marge de positionnement du text
+
+            h2{
+                font-size: 4rem;
+            }
+
+            h3{
+                color: $maincolor;
+                font-size: 2.5rem;
+            }
+        }
+    }
+    // End slider
+
+    // Card
+    &__products{
+        @include flexRow
+    }
+
+    // Card
+
+    // Bottom images 
+    &__image{
+        @include flexCol();
+        width: 100%;
+        
+        &__item{
+            border-top: solid 5px $maincolor;
+            width: 100%;
+        }
+    }
+}

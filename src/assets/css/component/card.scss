@@ -1,0 +1,30 @@
+.card{
+@include flexCol();
+width: 100%;
+margin: auto;
+
+    &__img{
+        width: 50%;
+    }
+
+    &__info{
+        
+        
+        &__text{
+
+
+
+            &__title{
+
+            }
+
+            &__price{
+
+            }
+        }
+
+        &__button{
+
+        }
+    }
+}

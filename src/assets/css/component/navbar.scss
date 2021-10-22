@@ -2,11 +2,12 @@ header{
     background-color: $secondarybg;
     padding: 1%;
     border-bottom: solid 5px $maincolor;
+   
 }
 
 .navbar{
     margin-right: auto;
-    width: 100%;
+    width: 95%;
     @include flexRow();
     justify-content: space-between;
     text-transform: uppercase;
