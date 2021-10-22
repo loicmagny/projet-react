@@ -1,39 +1,29 @@
 import React from "react";
-import GetCurrentDate from "../functions/getCurrentDate";
 
 export default function SignIn() {
-	// const [firstName, setFirstName] = useState('');
-
 	return (
-		<div>
-			<h2>S'inscrire</h2>
-			<form action="" method="POST">
-				<div>
-					<label for="firstName">Nom : </label>
-					<input type="firstName" name="firstName" id="firstName" required />
-				</div>
-				<div>
-					<label for="lastName">Prénom: </label>
-					<input type="lastName" name="lastName" id="lastName" required />
-				</div>
-				<div>
-					<label for="email">Enter your email: </label>
-					<input type="email" name="email" id="email" required />
-				</div>
-				<div>
-					<label for="password">Enter your password: </label>
-					<input type="password" name="password" id="password" required />
-				</div>
-				<label for="birthdate">Start date:</label>
+		<div className="signin">
+			<h2 className="signin__title">DEJA CLIENT ?</h2>
+			<form className="signin__form" action="" method="POST">
 				<input
-					type="date"
-					id="start"
-					name="birthdate"
-					value={`${GetCurrentDate()}`}
-					min="2018-01-01"
-					max="2018-12-31"
+					className="signin__form__input"
+					type="email"
+					name="email"
+					id="email"
+					placeholder="Votre email"
+					required
 				/>
-				<button>S'inscrire</button>
+
+				<input
+					className="signin__form__input"
+					type="password"
+					name="password"
+					id="password"
+					placeholder="Votre mot de passe"
+					required
+				/>
+				<p className="signin__forgot">Vous avez oublié votre mot de passe ?</p>
+				<button className="signin__submit">S'inscrire</button>
 			</form>
 		</div>
 	);
