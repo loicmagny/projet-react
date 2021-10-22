@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 import axios from "axios";
+import {url, urlProduct} from '../functions/globals'
+
 
 export default function SoloProd(props) {
 	const [prod, setProd] = useState([]);
@@ -9,7 +11,7 @@ export default function SoloProd(props) {
 
 	useEffect(() => {
 		axios
-			.get(`https://5f72-176-162-49-41.ngrok.io/products/${props.match.params.slug}`)
+			.get(`${urlProduct}/${props.match.params.slug}`)
 			.then((res) => {
 				setProd(res.data);
 				setLoading(false);
@@ -18,27 +20,6 @@ export default function SoloProd(props) {
 				console.log(err.message);
 			});
 	}, [props.match.params.slug]);
-
-	// // const { parseMultipartData, sanitizeEntity } = require('strapi-utils');
-
-	// module.exports = {
-	// /**
-	//  * Create a record.
-	//  *
-	//  * @return {Object}
-	//  */
-
-	// async create(ctx) {
-	// 	let entity;
-	// 	if (ctx.is('multipart')) {
-	// 	const { data, files } = parseMultipartData(ctx);
-	// 	entity = await strapi.services.restaurant.create(data, { files });
-	// 	} else {
-	// 	entity = await strapi.services.restaurant.create(ctx.request.body);
-	// 	}
-	// 	return sanitizeEntity(entity, { model: strapi.models.restaurant });
-	// },
-	// };
 
 	return loading ? (
 		<p>Chargement en cours</p>
@@ -49,7 +30,7 @@ export default function SoloProd(props) {
 			</nav>
 			<div>
 				<img
-					src={`https://5f72-176-162-49-41.ngrok.io/products${prod.image.url}`}
+					src={`${url}${prod.image.url}`}
 					alt={prod.alternativeText}
 				/>
 				<h3>{prod.title}</h3>

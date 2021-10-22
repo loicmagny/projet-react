@@ -17,18 +17,23 @@ export default function App(props) {
 	return (
 		<body>
 			<Header />
+					<main>
 			<Router>
-				<Switch>
-					<Route path="/" exact component={Home} />
-					<Route path="/products" exact component={Products} />
-					<Route path="/services" exact component={Services} />
-					<Route path="/signin" exact component={SignIn} />
-					<Route path="/config" exact component={Config} />
-					<Route path="/about" exact component={About} />
-					<Route path="/contact" exact component={Contact} />
-					<Route path="/products/:slug" exact {...props} component={SoloProd} />
-				</Switch>
+						<Route path="/" exact component={Home} />
+						<Route path="/products" exact component={Products} />
+						<Route path="/services" exact component={Services} />
+						<Route path="/signin" exact component={SignIn} />
+						<Route path="/config" exact component={Config} />
+						<Route path="/about" exact component={About} />
+						<Route path="/contact" exact component={Contact} />
+						<Route
+							path="/products/:slug"
+							exact
+							{...props}
+							component={SoloProd}
+						/>
 			</Router>
+					</main>
 			<Footer />
 		</body>
 	);

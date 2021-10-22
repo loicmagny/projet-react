@@ -1,14 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { url } from "../functions/globals";
 
 export default function ProdsCard({ prod }) {
 	return (
 		<div>
 			<Link to={`/products/${prod.slug}`} key={prod.slug}>
-				<img
-					src={`https://5f72-176-162-49-41.ngrok.io${prod.image.url}`}
-					alt={prod.image.alternativeText}
-				/>
+				<img src={`${url}${prod.image.url}`} alt={prod.image.alternativeText} />
 				<p>{prod.title}</p>
 			</Link>
 			<p>{prod.price}</p>
