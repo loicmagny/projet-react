@@ -3,21 +3,22 @@ import { getAxiosData } from "../functions/axiosCall.js";
 import banner00 from "../assets/img/homepage/banner-00.jpg";
 import banner01 from "../assets/img/homepage/banner-01.jpg";
 import banner02 from "../assets/img/homepage/banner-02.jpg";
+import loadingimg from "../assets/img/loading.svg";
 import ProdsCard from "../components/prodsCardsList";
 import { urlProduct } from "../functions/globals";
+
 
 function Home() {
 	const [loading, setLoading] = useState(true);
 	const [prods, setProds] = useState([]);
 	useEffect(() => {
 		getAxiosData(`${urlProduct}`).then((resp) => {
-			console.log(resp.data);
 			setProds(resp.data);
 			setLoading(false);
 		});
 	}, []);
 	return loading ? (
-		<p>Chargement en cours</p>
+		<img src={loadingimg} alt="" className="loading"/>
 	) : (
 		<section className="homeSection">
 			<div className="homeSection__slider">
