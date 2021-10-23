@@ -10,6 +10,7 @@ import Services from "./pages/services.js";
 import Config from "./pages/config.js";
 import SoloProd from "./pages/prodCards.js";
 import SignIn from "./pages/signin.js";
+import SignUp from "./pages/signup.js";
 import Header from "./components/header.js";
 import Footer from "./components/footer.js";
 
@@ -23,6 +24,7 @@ export default function App(props) {
 						<Route path="/products" exact component={Products} />
 						<Route path="/services" exact component={Services} />
 						<Route path="/signin" exact component={SignIn} />
+						<Route path="/signup" exact component={SignUp} />
 						<Route path="/config" exact component={Config} />
 						<Route path="/about" exact component={About} />
 						<Route path="/contact" exact component={Contact} />

@@ -1,44 +1,61 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import GetCurrentDate from "../functions/getCurrentDate";
+import signupAPI from "../services/signUpAPI";
 
-export default function SignIn() {
-	// const [firstName, setFirstName] = useState('');
-	// const [firstName, setFirstName] = useState('');
-	// const [firstName, setFirstName] = useState('');
-	// const [firstName, setFirstName] = useState('');
-	// const [firstName, setFirstName] = useState('');
-	// const [firstName, setFirstName] = useState('');
+export default function SignUp() {
+	const [account, setAccount] = useState('');	
+
+	const handleSubmit = async (event) => {
+		event.preventDefault();
+		console.log('submit');
+		try {
+			const data = signupAPI.create(account); 
+			console.log(data);
+		}
+		catch(error) {
+			console.log(error);
+		}
+	}
+
+	const handleChange = ({currentTarget}) => {
+		const { name, value } = currentTarget;
+		setAccount({
+			...account,
+			[name]: value
+		})
+	}
 
 	return (
-		<div>
+		<div class="signin">
 			<h2>S'inscrire</h2>
-			<form action="" method="POST">
+			<form onSubmit={handleSubmit}>
 				<div>
-					<label for="firstName">Nom : </label>
-					<input type="firstName" name="firstName" id="firstName" required />
+					<label for="firstName">Prénom: </label>
+					<input class="signin__input" onFocusOut={handleChange} type="text" name="first_name" id="first_name" required />
 				</div>
 				<div>
-					<label for="lastName">Prénom: </label>
-					<input type="lastName" name="lastName" id="lastName" required />
+					<label for="lastName">Nom: </label>
+					<input onChange={handleChange} type="text" name="last_name" id="last_name" required />
 				</div>
 				<div>
-					<label for="email">Enter your email: </label>
-					<input type="email" name="email" id="email" required />
+					<label for="email">Email: </label>
+					<input onChange={handleChange} type="email" name="email" id="email" required />
 				</div>
 				<div>
-					<label for="password">Enter your password: </label>
-					<input type="password" name="password" id="password" required />
+					<label for="password">Mot de passe: </label>
+					<input onChange={handleChange} type="password" name="password" id="password" required />
 				</div>
-				<label for="birthdate">Start date:</label>
+				<label for="birthdate">Birthdate :</label>
 				<input
+					onChange={handleChange}
 					type="date"
 					id="start"
-					name="birthdate"
+					name="birth_date"
 					value={`${GetCurrentDate()}`}
-					min="2018-01-01"
-					max="2018-12-31"
+					// min="2018-01-01"
+					// max="2018-12-31"
 				/>
-				<button>S'inscrire</button>
+				<button type="submit">S'inscrire</button>
 			</form>
 		</div>
 	);

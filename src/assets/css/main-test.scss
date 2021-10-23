@@ -1,0 +1,31 @@
+@import "variables";
+@import "function";
+@import "account";
+@import "cart";
+@import "component";
+@import "computer";
+@import "config";
+@import "home";
+@import "signin";
+@import "peripherique";
+@import "./component/alerte";
+@import "./component/card";
+@import "./component/navbar";
+@import "./component/footer";
+
+
+html{
+    font-family: $titlefont;
+}
+*{
+    margin: 0;
+    padding: 0;
+    color: $textcolor;
+}
+a{
+    color: $textcolor;
+    text-decoration: none;
+}
+body{
+    background-color: $primarybg;
+}

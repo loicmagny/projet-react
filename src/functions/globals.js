@@ -1,2 +1,3 @@
-export const url = "http://79f5-176-162-49-41.ngrok.io";
-export const urlProduct = "http://79f5-176-162-49-41.ngrok.io/products";
+export const url = "http://localhost:1337";
+export const urlProduct = "http://localhost:1337/products";
+export const urlCustomer = "http://localhost:1337/customers";
