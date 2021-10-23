@@ -14,8 +14,8 @@ export default function ProdsCard({ prod }) {
 					<p className="card__info__text__title">{prod.title}</p>
 					<p className="card__info__text__price">{prod.price}</p>
 				</div>
-				<Link to={`/products/${prod.slug}`} key={prod.slug}>
-					<button className="card__info__button">Acheter</button>
+				<Link to={`/products/${prod.slug}`} key={prod.slug} className="card__info__link">
+					<button className="card__info__link__button">Voir plus</button>
 				</Link>
 			</div>
 		</div>

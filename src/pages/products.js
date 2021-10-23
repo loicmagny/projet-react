@@ -4,10 +4,12 @@ import FiltersProductList from "../components/filters";
 
 export default function Products() {
 	return (
-		<div>
-			<h2>Produits</h2>
+		<div className="catalogue">
+			<h2>Produits :</h2>
+			<div className="catalogue__content">
 			<FiltersProductList />
 			<ProductList />
+			</div>
 		</div>
 	);
 }

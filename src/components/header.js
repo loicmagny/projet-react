@@ -11,26 +11,36 @@ export default function Header(props) {
 				<nav className="navbar">
 					<ul className="navbar__list">
 						<li className="navbar__list__logo">
+						<Link to={"/"} className="nav-link">
 							<img src={logo} alt="" />
+							</Link>
 						</li>
 						<li>
 							<Link to={"/"} className="nav-link">
-								Accueil
+								Acceuil
+							</Link>
+						</li>
+						{/* Ici tout les catalogues pointent vers produits, il faut 
+						faire en sorte que la page n'affiche que les produits de la 
+						categorie en question */}
+						<li>
+							<Link to={"/products"} className="nav-link">
+								Ordinateurs
 							</Link>
 						</li>
 						<li>
 							<Link to={"/products"} className="nav-link">
-								Produits
+								Configtonpc
 							</Link>
 						</li>
 						<li>
 							<Link to={"/services"} className="nav-link">
-								Services
+								Composants
 							</Link>
 						</li>
 						<li>
 							<Link to={"/config"} className="nav-link">
-								Config Ton PC
+								Peripheriques
 							</Link>
 						</li>
 						<li>

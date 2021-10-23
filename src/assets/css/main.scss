@@ -2,17 +2,17 @@
 @import "function";
 @import "account";
 @import "cart";
-@import "component";
-@import "computer";
+@import "catalogue";
 @import "config";
 @import "home";
 @import "signin";
-@import "peripherique";
 @import "./component/alerte";
 @import "./component/card";
 @import "./component/navbar";
 @import "./component/footer";
 @import "./component/loading";
+@import "./component/productlist";
+@import "./component/filters";
 
 
 html{
@@ -29,4 +29,7 @@ a{
 }
 body{
     background-color: $primarybg;
+}
+ul{
+    list-style-type: none;
 }

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import ProdsCard from "./prodsCardsList.js";
 import { getAxiosData } from "../functions/axiosCall.js";
 import {urlProduct} from '../functions/globals'
+import loadingimg from "../assets/img/loading.svg";
 
 export default function ProductList() {
 	const [loading, setLoading] = useState(true);
@@ -15,10 +16,10 @@ export default function ProductList() {
 	}, []);
 	console.log(prods)
 	return loading ? (
-		<p>Chargement en cours</p>
+		<img src={loadingimg} alt="" className="loading"/>
 	) : (
 		<div>
-			<div>
+			<div className="productlist">
 				{prods.map((prod) => {
 					return <ProdsCard key={prod.id} prod={prod} />;
 				})}

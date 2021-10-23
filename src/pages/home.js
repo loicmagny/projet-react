@@ -33,11 +33,14 @@ function Home() {
 				<img src={banner01} alt="" className="homeSection__slider__img" />
 			</div>
 			<div className="homeSection__products">
+				<h2>Produits a la une :</h2>
+				<div className="homeSection__products__cards">
 				{prods
 					.filter((prod, index) => index < 4)
 					.map((prod) => {
 						return <ProdsCard key={prod.id} prod={prod} />;
 					})}
+				</div>
 			</div>
 			<div className="homeSection__image">
 				<img src={banner00} alt="" className="homeSection__image__item" />

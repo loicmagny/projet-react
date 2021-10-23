@@ -1,0 +1,6 @@
+.productlist{
+    @include flexRow;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+}
