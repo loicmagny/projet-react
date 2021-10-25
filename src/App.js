@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/home.js";
 import About from "./pages/about.js";
 import Contact from "./pages/contact.js";
+import SignUp from "./pages/signup.js";
 import Products from "./pages/products.js";
 import Services from "./pages/services.js";
 import Config from "./pages/config.js";
@@ -15,7 +16,7 @@ import Footer from "./components/footer.js";
 
 export default function App(props) {
 	return (
-		<body>
+		<>
 			<Header />
 					<main>
 			<Router>
@@ -26,6 +27,7 @@ export default function App(props) {
 						<Route path="/config" exact component={Config} />
 						<Route path="/about" exact component={About} />
 						<Route path="/contact" exact component={Contact} />
+						<Route path="/signup" exact component={SignUp} />
 						<Route
 							path="/products/:slug"
 							exact
@@ -35,7 +37,7 @@ export default function App(props) {
 			</Router>
 					</main>
 			<Footer />
-		</body>
+		</>
 
 
 
