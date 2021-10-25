@@ -43,4 +43,8 @@ header{
             }
         }
     }
+
+    &__list:nth-child(2){
+        width: 50%;
+    }
 }

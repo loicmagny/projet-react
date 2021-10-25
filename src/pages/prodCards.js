@@ -24,20 +24,34 @@ export default function SoloProd(props) {
 	return loading ? (
 		<p>Chargement en cours</p>
 	) : (
-		<div>
-			<nav>
+		<div className="singleproduct">
+			<div className="singleproduct__return">
 				<Link to="/products">Retour</Link>
-			</nav>
-			<div>
-				<img
-					src={`${url}${prod.image.url}`}
-					alt={prod.alternativeText}
-				/>
-				<h3>{prod.title}</h3>
-				<p>Status: {prod.price}</p>
-				<p>Species: {prod.description}</p>
-				<p>Quantité : 1</p>
-				<button>Ajouter au panier</button>
+			</div>
+			<div className="singleproduct__content">
+				<div className="singleproduct__content__images">
+					<div className="singleproduct__content__images__main">
+						<img src={`${url}${prod.image.url}`} alt={prod.alternativeText}/>
+					</div>
+					<div className="singleproduct__content__images__second">
+						<img src={`${url}${prod.image.url}`} alt={prod.alternativeText}/>
+						<img src={`${url}${prod.image.url}`} alt={prod.alternativeText}/>
+						<img src={`${url}${prod.image.url}`} alt={prod.alternativeText}/>
+					</div>
+				</div>
+				<div className="singleproduct__content__desc">
+					<h3>{prod.title}</h3>
+					<p>Species: {prod.description}</p>
+					<p className="singleproduct__content__desc__items"> {prod.price} €</p>
+					<p className="singleproduct__content__desc__items">Quantité : 
+						<select name="quantity" id="quantity" className="singleproduct__content__desc__items__select">
+							<option value="1">1</option>
+							{Array.from(Array(20).keys()).map(index => <option value={index+2}>{index+2}</option>)}
+							
+						</select>
+					</p>
+					<button>Ajouter au panier</button>
+				</div>		
 			</div>
 		</div>
 	);

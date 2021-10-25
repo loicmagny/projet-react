@@ -1,2 +1,2 @@
-export const url = "https://b2de-93-5-98-154.ngrok.io";
-export const urlProduct = "https://b2de-93-5-98-154.ngrok.io/products";
+export const url = "http://e86d-176-162-49-41.ngrok.io";
+export const urlProduct = "http://e86d-176-162-49-41.ngrok.io/products";

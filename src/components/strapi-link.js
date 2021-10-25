@@ -11,14 +11,16 @@ export default function ProductList() {
 	useEffect(() => {
 		getAxiosData(`${urlProduct}`).then((resp) => {
 			setProds(resp.data);
-			setLoading(false);
-		});
+			
+		}).finally(()=>{
+			setLoading(false)
+		})
 	}, []);
 	console.log(prods)
 	return loading ? (
 		<img src={loadingimg} alt="" className="loading"/>
 	) : (
-		<div>
+		<div className="contnair-list">
 			<div className="productlist">
 				{prods.map((prod) => {
 					return <ProdsCard key={prod.id} prod={prod} />;
