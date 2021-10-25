@@ -1,13 +1,12 @@
 .signin {
     width: 420px;
-    margin: 7em auto;
+    margin: 3em auto;
     border-radius: 1.5em;
 
     &__title {
         padding-top: 40px;
         color: $textcolor;
-        font-weight: bold;
-        font-size: 23px;
+        font-size: 24px;
         text-align: center;
     }
 
@@ -15,17 +14,17 @@
         padding-top: 40px;
 
         &__input {
-            width: 76%;
+            width: 85%;
             color: $secondarybg;
             font-weight: 700;
             font-size: 14px;
             letter-spacing: 1px;
             background: $secondarybg;
             padding: 10px 20px;
-            border: none;         
+            padding-top: 20px;
+            border: none;
             outline: none;
             box-sizing: border-box;
-            border: 2px solid rgba(0, 0, 0, 0.02);
             margin-bottom: 50px;
             margin-left: 46px;
             text-align: center;
@@ -33,10 +32,10 @@
             border: 0;
             z-index: 1;
             background-color: transparent;
-            border-bottom: 2px solid $maincolor; 
-             font-size: 1.125rem;
-             color: $textcolor;
-    
+            border-bottom: 2px solid $maincolor;
+            font-size: 1rem;
+            color: $textcolor;
+
         }
     }
 
@@ -46,13 +45,12 @@
         color: #fff;
         background: $maincolor;
         border: 0;
-        padding-left: 40px;
+        padding-left: 50px;
         padding-right: 40px;
         padding-bottom: 10px;
         padding-top: 10px;
-        margin-left: 33%;
-        font-size: 13px;
-        box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+        margin-left: 25%;
+        font-size: 20px;
     }
 
     &__forgot {
@@ -61,6 +59,20 @@
         text-align: center;
         color: $textcolor;
 
+    }
+
+    &__createaccount {
+        margin-top: 30px;
+        border-radius: 5em;
+        color: #fff;
+        background: $maincolor;
+        border: 0;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        margin-left: 17%;
+        font-size: 20px;
     }
 
 }

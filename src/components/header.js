@@ -50,6 +50,11 @@ export default function Header(props) {
 								<img src={account} alt="" className="navbar__list__logo__second"/>
 							</Link>
 						</li>
+						<li>
+							<Link to={"/signup"} className="nav__link">
+								<img src={account} alt="" className="navbar__list__logo__second"/>
+							</Link>
+						</li>
 					</ul>
 				</nav>
 				</header>

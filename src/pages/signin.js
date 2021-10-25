@@ -3,8 +3,10 @@ import React from "react";
 export default function SignIn() {
 	return (
 		<div className="signin">
-			<h2 className="signin__title">DEJA CLIENT ?</h2>
+			<h1 className="signin__title">DÉJÀ CLIENT ?</h1>
 			<form className="signin__form" action="" method="POST">
+				<div>
+				<label for="email"></label>
 				<input
 					className="signin__form__input"
 					type="email"
@@ -13,7 +15,9 @@ export default function SignIn() {
 					placeholder="Votre email"
 					required
 				/>
-
+                </div>
+				<div>
+				<label for="password"></label>
 				<input
 					className="signin__form__input"
 					type="password"
@@ -22,9 +26,13 @@ export default function SignIn() {
 					placeholder="Votre mot de passe"
 					required
 				/>
+				</div>
 				<p className="signin__forgot">Vous avez oublié votre mot de passe ?</p>
-				<button className="signin__submit">S'inscrire</button>
+				<button className="signin__submit">CONNEXION</button>
+				
 			</form>
+		<h1 className="signin__title">NOUVEAU CLIENT ?</h1>
+		<button className="signin__createaccount">CRÉE UN COMPTE</button>
 		</div>
 	);
 }

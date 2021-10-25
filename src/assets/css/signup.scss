@@ -1,0 +1,54 @@
+.signup {
+    width: 420px;
+    margin: 3em auto;
+    border-radius: 1.5em;
+
+
+    &__title {
+        padding-top: 40px;
+        color: $textcolor;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    &__form {
+        padding-top: 40px;
+
+        &__input {
+            width: 85%;
+            color: $secondarybg;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+            background: $secondarybg;
+            padding: 10px 20px;
+            padding-top: 20px;
+            outline: none;
+            box-sizing: border-box;
+            margin-left: 46px;
+            text-align: center;
+            margin-bottom: 27px;
+            border: 0;
+            z-index: 1;
+            background-color: transparent;
+            border-bottom: 2px solid $maincolor;
+            font-size: 1.125rem;
+            color: $textcolor;
+
+        }
+
+        &__submit {
+            border-radius: 5em;
+            color: $textcolor;
+            background: $maincolor;
+            border: 0;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            margin-left: 30%;
+            font-size: 20px;
+        }
+    }
+
+}
