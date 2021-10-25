@@ -1,21 +1,24 @@
 import React, {useState, useEffect} from "react";
 import GetCurrentDate from "../functions/getCurrentDate";
-import signupAPI from "../services/signUpAPI";
+import usersAPI from "../services/usersAPI";
+import { useHistory } from "react-router";
 
 export default function SignUp() {
+
 	const [account, setAccount] = useState('');	
+	const history = useHistory();
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 		console.log('submit');
 		try {
-			const data = signupAPI.create(account); 
-			console.log(data);
+			usersAPI.register(account); 
+			history.push('./pages/home');
 		}
 		catch(error) {
 			console.log(error);
 		}
-	}
+	} 
 
 	const handleChange = ({currentTarget}) => {
 		const { name, value } = currentTarget;
@@ -23,7 +26,10 @@ export default function SignUp() {
 			...account,
 			[name]: value
 		})
+		console.log(account);
 	}
+
+
 
 	return (
 		<div class="signin">
@@ -31,11 +37,11 @@ export default function SignUp() {
 			<form onSubmit={handleSubmit}>
 				<div>
 					<label for="firstName">Prénom: </label>
-					<input class="signin__input" onFocusOut={handleChange} type="text" name="first_name" id="first_name" required />
+					<input class="signin__input" onChange={handleChange} type="text" name="username" id="first_name" required />
 				</div>
 				<div>
 					<label for="lastName">Nom: </label>
-					<input onChange={handleChange} type="text" name="last_name" id="last_name" required />
+					<input onChange={handleChange} type="text" name="lastname" id="last_name" required />
 				</div>
 				<div>
 					<label for="email">Email: </label>
@@ -50,7 +56,7 @@ export default function SignUp() {
 					onChange={handleChange}
 					type="date"
 					id="start"
-					name="birth_date"
+					name="birthdate"
 					value={`${GetCurrentDate()}`}
 					// min="2018-01-01"
 					// max="2018-12-31"

@@ -1,12 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Link } from "react-router-dom";
 import logo from "../assets/img/logo.svg";
 import account from "../assets/img/account.svg";
 import cart from "../assets/img/cart.svg";
 
 export default function Header(props) {
 	return (
-		<Router>
 			<header>
 				<nav className="navbar">
 					<ul className="navbar__list">
@@ -52,7 +51,6 @@ export default function Header(props) {
 						</li>
 					</ul>
 				</nav>
-				</header>
-		</Router>
+			</header>
 	);
 }

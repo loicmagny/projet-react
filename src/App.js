@@ -17,9 +17,9 @@ import Footer from "./components/footer.js";
 export default function App(props) {
 	return (
 		<body>
+			<Router>
 			<Header />
 					<main>
-			<Router>
 						<Route path="/" exact component={Home} />
 						<Route path="/products" exact component={Products} />
 						<Route path="/services" exact component={Services} />
@@ -34,9 +34,9 @@ export default function App(props) {
 							{...props}
 							component={SoloProd}
 						/>
-			</Router>
 					</main>
 			<Footer />
+			</Router>
 		</body>
 	);
 }

@@ -7,6 +7,7 @@ export default function ProdsCard({ prod }) {
 		<div className="card">
 			<img 
 				src={`${url}${prod.image.url}`} 
+				// src={`${url}${prod.image[0].url}`} 
 				alt={prod.image.alternativeText} 
 				className="card__img"/>
 			<div className="card__info">
@@ -14,7 +15,7 @@ export default function ProdsCard({ prod }) {
 					<p className="card__info__text__title">{prod.title}</p>
 					<p className="card__info__text__price">{prod.price}</p>
 				</div>
-				<Link to={`/products/${prod.slug}`} key={prod.slug}>
+				<Link to={`/products/${prod.id}`} key={prod.id}>
 					<button className="card__info__button">Acheter</button>
 				</Link>
 			</div>

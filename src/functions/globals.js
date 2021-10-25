@@ -1,3 +1,5 @@
 export const url = "http://localhost:1337";
-export const urlProduct = "http://localhost:1337/products";
-export const urlCustomer = "http://localhost:1337/customers";
+export const urlProduct = url + "/products";
+export const urlRegister = url + "/auth/local/register";
+export const urlLogin = url + "/auth/local";
+export const urlCart = url + "/carts"
