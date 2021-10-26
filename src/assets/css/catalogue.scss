@@ -1,0 +1,7 @@
+.catalogue{
+    padding: 1%;
+    text-transform: uppercase;
+    &__content{
+        @include flexRow;
+    }
+}

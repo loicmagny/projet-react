@@ -7,6 +7,7 @@ function register(account) {
     .then(response => {
         localStorage.setItem('userId', response.data.user.id);
         localStorage.setItem('userToken', response.data.jwt);
+        localStorage.setItem('userName', response.data.user.username);
         axios.defaults.headers["Authorization"] = "Bearer " + localStorage.getItem('userToken');
     });
 }
@@ -18,10 +19,19 @@ function login(account) {
         console.log('User profile :', response.data.user);
         localStorage.setItem('userId', response.data.user.id);
         localStorage.setItem('userToken', response.data.jwt);
+        localStorage.setItem('userName', response.data.user.username);
     });
+}
+
+function disconnect() {
+    let keysToRemove = ["userId", "userToken", "userName"]; 
+    for (let key of keysToRemove) {
+        localStorage.removeItem(key);
+    }
 }
 
 export default {
     register,
-    login
+    login,
+    disconnect
 };

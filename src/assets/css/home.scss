@@ -33,7 +33,17 @@
 
     // Card
     &__products{
-        @include flexRow
+        @include flexCol;
+        text-transform: uppercase;
+        padding: 1%;
+        margin: auto;
+        @include bordertop;
+        
+        &__cards{
+            @include flexRow;
+            justify-content: space-between;
+            padding: 5%;
+        }
     }
 
     // Card
@@ -44,7 +54,7 @@
         width: 100%;
         
         &__item{
-            border-top: solid 5px $maincolor;
+            @include bordertop;
             width: 100%;
         }
     }

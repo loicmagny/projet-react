@@ -2,20 +2,34 @@
 @import "function";
 @import "account";
 @import "cart";
-@import "component";
-@import "computer";
+@import "catalogue";
 @import "config";
 @import "home";
 @import "signin";
-@import "peripherique";
+@import "singleproduct";
+@import "signup";
 @import "./component/alerte";
 @import "./component/card";
 @import "./component/navbar";
 @import "./component/footer";
+@import "./component/loading";
+@import "./component/productlist";
+@import "./component/filters";
 
 
-html{
+html,body{
     font-family: $titlefont;
+    height: 100%;
+    // min-height: 100%;
+}
+main{
+    min-height: 100%;
+    flex-grow: 100;
+    display: flex;
+    align-items: center;
+}
+#root{
+    height: 75%;
 }
 *{
     margin: 0;
@@ -27,5 +41,11 @@ a{
     text-decoration: none;
 }
 body{
+    min-height: 100%;
     background-color: $primarybg;
+    @include flexCol;
+
+}
+ul{
+    list-style-type: none;
 }

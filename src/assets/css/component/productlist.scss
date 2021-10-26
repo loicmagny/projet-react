@@ -1,0 +1,9 @@
+.productlist{
+    @include flexRow;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+}
+.contnair-list{
+    width: 80%;
+}
