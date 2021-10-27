@@ -1,7 +1,24 @@
 import axios from "axios";
 import { urlCart } from "../functions/globals";
 
-
+function getCart(id) {
+  try {
+    return axios({
+      method: 'get',
+      url: `${urlCart}/?user_id=${id}`,
+      headers: {
+        Authorization: 'Bearer ' + localStorage.getItem('userToken')
+      }
+    }).then(response => {
+      if (response.data.length != 0) {
+        return response.data;
+      }
+    })
+  }
+  catch(error) {
+    console.log(error);
+  }
+}
 
 function add(product) {
   axios({
@@ -95,6 +112,7 @@ async function remove(id) {
 
 
 export default {
+  getCart,
   add,
   checkProduct,
   increment,

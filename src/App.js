@@ -12,6 +12,7 @@ import SoloProd from "./pages/prodCards.js";
 import SignIn from "./pages/signin.js";
 import Header from "./components/header.js";
 import Footer from "./components/footer.js";
+import Cart from "./pages/cart.js";
 
 export default function App(props) {
 	return (
@@ -27,6 +28,7 @@ export default function App(props) {
 						<Route path="/about" exact component={About} />
 						<Route path="/contact" exact component={Contact} />
 						<Route path="/signup" exact component={SignUp} />
+						<Route path="/cart" exact component={Cart} />
 						<Route
 							path="/products/:slug"
 							exact
