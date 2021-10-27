@@ -4,16 +4,20 @@
 
     &__content{
     margin: auto;
-    width: 80%;
-    justify-content: space-around;
+    width: 70%;
+    justify-content: space-between;
     padding-top: 5%;
     padding-bottom: 5%;
     @include flexRow;
         &__images{
-            width: 50%;
+            @include flexCol;
+            justify-content: center;
+            align-items: flex-start;
+            width: 60%;
             &__main{
+                align-self: flex-start;
                 & > img{
-                    width: 60%;
+                    width: 100%;
                     text-align: center;
                 }
             }
@@ -27,15 +31,25 @@
         }
 
         &__desc{
-            font-size: 1.5rem;
-            width: 30%;
-            text-transform: uppercase;
+            font-size: 1rem;
+            width: 40%;
             @include flexCol;
             justify-content: space-around;
-            text-align: center;
+            text-align: left;
+            line-height: 1.5em;
+
+            & > h3{
+                    color: $maincolor;
+                    text-transform: uppercase;
+                }
 
             &__items{
-                font-weight: bold;
+                
+
+                &__price{
+                    text-align: right;
+                    font-weight: bold;
+                }
                 &__quantity{
                     display: flex;
                     justify-content: center;

@@ -1,6 +1,6 @@
 .homeSection{
  @include flexCol();
-
+width: 100%;
 
     // Startup slider
     &__slider{
@@ -20,12 +20,12 @@
             // Marge de positionnement du text
 
             h2{
-                font-size: 4rem;
+                font-size: 3rem;
             }
 
             h3{
                 color: $maincolor;
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
         }
     }

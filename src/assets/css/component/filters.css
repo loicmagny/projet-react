@@ -1,0 +1,14 @@
+.filters {
+  width: 20%;
+  margin-top: 2%;
+  text-align: left;
+  position: fixed;
+}
+
+.filters__list__item {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+  padding-top: 10%;
+}
+/*# sourceMappingURL=filters.css.map */

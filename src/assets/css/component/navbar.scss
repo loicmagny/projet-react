@@ -2,7 +2,10 @@ header{
     background-color: $secondarybg;
     padding: 1%;
     border-bottom: solid 5px $maincolor;
-   
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+   width: 100%;
 }
 
 .navbar{
@@ -20,6 +23,10 @@ header{
             margin-right: 2rem;
         }
     }
+
+    li a:hover{
+        color: $maincolor;
+    }
     
     &__list{
         padding: 0;
@@ -32,6 +39,35 @@ header{
         li:nth-child(1){
             text-align: center;
         }
+
+        // Menu deroulant
+
+        &__deroulant_declencheur{
+            cursor: pointer;
+        }
+
+        &__deroulant{
+            display: none;
+            position: absolute;
+            background: $primarybg;
+            padding: 1%;
+            padding-top: 0;
+
+            &__item{
+
+            }
+        }
+
+        &__deroulant_declencheur:hover ul{
+            display: list-item;
+        }
+        &__deroulant_declencheur:hover ul li{
+            float: none;
+            margin-top: 10%;
+        }
+
+        // Menu deroulant
+
 
         &__logo{
             

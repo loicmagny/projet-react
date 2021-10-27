@@ -1,6 +1,11 @@
 .catalogue{
+    margin: 0;
     padding: 1%;
     text-transform: uppercase;
+    
+    h2{
+        position: fixed;
+    }
     &__content{
         @include flexRow;
     }

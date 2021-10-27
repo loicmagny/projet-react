@@ -1,0 +1,31 @@
+.addcartnotif{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $popupbg;
+    width: 60vh;
+    border-radius: 20px;
+    padding: 1%;
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+    z-index: 1000000000;
+
+    
+    &__img{
+        width: 
+        10%;
+        padding-right: 3%;
+    }
+    &__img:hover{
+        cursor: pointer;
+    }
+    &__notif{
+        color: black;
+        font-size: 1.2rem;
+        align-self: center;
+    }
+}
+.addcartnotif:hover{
+    cursor: pointer;
+}
