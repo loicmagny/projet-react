@@ -12,14 +12,14 @@ export default function Header(props) {
 					<li className="navbar__list__logo">
 						<Link to={"/"} className="nav-link">
 							<img src={logo} alt="" />
-						</Link>
-					</li>
-					<li>
-						<Link to={"/"} className="nav-link">
-							Accueil
-						</Link>
-					</li>
-					{/* Ici tout les catalogues pointent vers produits, il faut 
+							</Link>
+						</li>
+						<li>
+							<Link to={"/"} className="nav-link">
+								Accueil
+							</Link>
+						</li>
+						{/* Ici tout les catalogues pointent vers produits, il faut 
 						faire en sorte que la page n'affiche que les produits de la 
 						categorie en question */}
 					<li className="navbar__list__deroulant_declencheur">

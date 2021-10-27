@@ -36,7 +36,6 @@ width: 100%;
         @include flexCol;
         text-transform: uppercase;
         padding: 1%;
-        margin: auto;
         @include bordertop;
         
         &__cards{

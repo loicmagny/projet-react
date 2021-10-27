@@ -1,4 +1,3 @@
-export const urlReact = "http://localhost:3000";
 export const url = "http://localhost:1337";
 export const urlProduct = url + "/products";
 export const urlLogin = url + "/auth/local";

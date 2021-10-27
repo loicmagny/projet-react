@@ -67,7 +67,6 @@ export default function SoloProd(props) {
 			}
 		}) 	
 	} 
-
 	
 	useEffect(() => {
 		axios
