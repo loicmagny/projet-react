@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,QAAQ,CAAA;EACR,KAAK,EAAE,GAAG;EACV,UAAU,EAAE,EAAE;EACd,UAAU,EAAE,IAAI;EAChB,QAAQ,EAAE,KAAK;CAWd;;AAPQ,AAAD,oBAAO,CAAA;EACH,cAAc,EAAE,SAAS;EACzB,WAAW,EAAE,IAAI;EACjB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;CACnB",
-    "sources": [
-        "filters.scss"
-    ],
-    "names": [],
-    "file": "filters.css"
-}
