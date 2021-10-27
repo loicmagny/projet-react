@@ -16,7 +16,7 @@ export default function Header(props) {
 						</li>
 						<li>
 							<Link to={"/"} className="nav-link">
-								Acceuil
+								Accueil
 							</Link>
 						</li>
 						{/* Ici tout les catalogues pointent vers produits, il faut 
