@@ -18,8 +18,7 @@ export default function Cart() {
 	}, []);
 
 	return isLoaded ? (
-		<div >
-			<h2>Panier :</h2>
+		<div className="cartpage">
 			<table className="cart">
 				<thead>
 					<tr className="cart__names">
@@ -28,7 +27,7 @@ export default function Cart() {
 						<th colspan="1.2">Prix</th>
 						<th colspan="1">Quantité</th>
 						<th colspan="1.2">Total</th>
-						<th colspan="1">Trash</th>
+						<th colspan="1"></th>
 					</tr>
 				</thead>
 
@@ -55,6 +54,11 @@ export default function Cart() {
 				})
 				}
 			</table>
+			<div className="commander">
+				<h3>Total TTC</h3>
+				<p>taff de guillaume €</p>
+				<button>Passer la commande</button>
+			</div>
 		</div>
 	) : (
 		<img src={loadingimg} alt="" className="loading" />

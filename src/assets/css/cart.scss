@@ -1,17 +1,16 @@
 .cart {
     width: 100%;
     margin: 0;
-    margin-left: 2%;
     font-size: 0.9rem;
 
     td {
         text-align: center;
     }
     th{
-        text-align: left;
-    }
-    th:nth-child(5){
         text-align: center;
+    }
+    th:nth-child(2){
+        text-align: left;
     }
     td:not(:nth-child(1)){
         width: 20%;
@@ -32,6 +31,7 @@
             img{
                 width: 40%
             }
+            cursor: pointer;
         }
         &__item {
             @include flexCol;
@@ -51,4 +51,22 @@
             }
         }
     }
+}
+
+.commander{
+    
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    button{
+        margin-top: 20%;
+        @include button;
+    }
+}
+.cartpage{
+    @include flexRow;
+    width: 100%;
+    margin: 2%;
 }
