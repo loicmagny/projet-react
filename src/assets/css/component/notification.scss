@@ -1,10 +1,11 @@
 .addcartnotif{
+    border-left: solid 10px $secondcolor;
+    color: $textcolor;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: $popupbg;
     width: 60vh;
-    border-radius: 20px;
     padding: 1%;
     position: fixed;
     right: 1%;
@@ -13,6 +14,7 @@
 
     
     &__img{
+        stroke: $secondcolor;
         width: 
         10%;
         padding-right: 3%;
@@ -21,7 +23,6 @@
         cursor: pointer;
     }
     &__notif{
-        color: black;
         font-size: 1.2rem;
         align-self: center;
     }

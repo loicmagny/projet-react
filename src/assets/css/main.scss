@@ -2,6 +2,7 @@
 @import "function";
 @import "account";
 @import "cart";
+@import "about";
 @import "catalogue";
 @import "config";
 @import "home";
@@ -32,9 +33,6 @@ main{
     align-items: center;
     margin-top: 5%;
     }
-main>.catalogue{
-    margin-top: -10%;
-}
 #root{
     height: 75%;
 }

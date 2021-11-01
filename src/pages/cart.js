@@ -94,7 +94,7 @@ export default function Cart() {
 				</div>
 			</div>
 		) : (
-			<div>Votre panier est vide</div>
+			<div className="empty">Votre panier est vide</div>
 		)
 	} else {
 		return (

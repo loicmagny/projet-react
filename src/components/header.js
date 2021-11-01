@@ -26,24 +26,24 @@ export default function Header(props) {
 						<span >Catalogue</span>
 						<ul className="navbar__list__deroulant">
 							<li className="navbar__list__deroulant__item">
-								<Link to={"/products"} className="nav-link" >
+								<Link to={"/products?category=1"} className="nav-link" >
 									Ordinateurs
 								</Link>
 							</li>
 							<li className="navbar__list__deroulant__item">
-								<Link to={"/products"} className="nav-link">
+								<Link to={"/products?category=2"} className="nav-link">
 									Composants
 								</Link>
 							</li>
 							<li className="navbar__list__deroulant__item">
-								<Link to={"/config"} className="nav-link">
+								<Link to={"/products?category=3"} className="nav-link">
 									Peripheriques
 								</Link>
 							</li>
 						</ul>
 					</li>
 					<li>
-						<Link to={"/products"} className="nav-link">
+						<Link to={"/config"} className="nav-link">
 							Configtonpc
 						</Link>
 					</li>

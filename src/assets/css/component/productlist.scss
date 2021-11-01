@@ -1,8 +1,8 @@
 .productlist{
     @include flexRow;
     flex-wrap: wrap;
-    width: 100%;
-    margin: auto;
+    width: 70%;
+    margin-left: 20%;
 }
 .contnair-list{
     width: 80%;

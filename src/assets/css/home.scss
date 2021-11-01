@@ -1,44 +1,100 @@
-.homeSection{
- @include flexCol();
-width: 100%;
+.homeSection {
+    @include flexCol();
+    width: 100%;
 
     // Startup slider
-    &__slider{
+    &__slider {
         width: 100%;
         position: relative;
+
         // Parent mis en relatif pour afficher le text sur l'image
-        &__img{
+        &__img {
+            border-bottom: solid 5px $maincolor;
             width: 100%;
-            
+            height: 70%;
+
+
         }
 
-        &__text{
+        &__text {
             position: absolute;
             // Place le text sur l'image
-            margin-top: 10%;
+            margin-top: 8%;
             margin-left: 2%;
             // Marge de positionnement du text
 
-            h2{
+            h2 {
+                color: $textcolor;
                 font-size: 3rem;
             }
 
-            h3{
+            h3 {
+                color: $secondcolor;
+                font-size: 2rem;
+            }
+        }
+
+        &__reverse {
+            position: absolute;
+            margin-top: 8%;
+            right: 2%;
+
+            h2 {
+                color: $textcolor;
+                font-size: 3rem;
+            }
+
+            h3 {
                 color: $maincolor;
                 font-size: 2rem;
             }
         }
     }
+
     // End slider
 
+
+
+    &__content_text{
+        @include flexRow;
+        width: 100%;
+        height: 50vh;
+        &__content{
+            height: 100%;
+            @include flexCol;
+            margin-top: 5%;
+            align-items: center;
+            p{
+                margin-top: 2% ;
+                width: 50%;
+            }
+            span{
+                color: $secondcolor;
+                font-weight: bold;
+            }
+            h2{
+                color: $maincolor;
+            }
+        }
+        &__cards {
+            @include flexRow;
+            width: 50%
+
+            
+        }
+    }
+
+
+
     // Card
-    &__products{
+    &__products {
         @include flexCol;
+        border-bottom: solid 5px $maincolor;
         text-transform: uppercase;
         padding: 1%;
-        @include bordertop;
-        
-        &__cards{
+
+
+        &__cards {
             @include flexRow;
             justify-content: space-between;
             padding: 5%;
@@ -46,15 +102,7 @@ width: 100%;
     }
 
     // Card
-
-    // Bottom images 
-    &__image{
-        @include flexCol();
-        width: 100%;
-        
-        &__item{
-            @include bordertop;
-            width: 100%;
-        }
-    }
+}
+.exept{
+    border-bottom: none !important;
 }

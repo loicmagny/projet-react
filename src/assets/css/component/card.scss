@@ -14,12 +14,26 @@ margin-bottom: 2%;
 
     &__info{
         width: 80%;
-        @include flexRow();
+        @include flexCol();
         justify-content: space-between;
-        align-items: center;
         
         &__text{
             font-weight: bold;
+            align-items:center ;
+            width: 100%;
+            @include flexRow;
+            justify-content: space-between;
+
+            &__title{
+                text-transform: uppercase;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap
+            }
+
+            &__price{
+
+            }
         }
 
 

@@ -62,7 +62,9 @@ export default function SignIn() {
 			</form>
 			<div className="signin__newclient">
 				<h1 className="signin__newclient__title">NOUVEAU CLIENT ?</h1>
-				<button className="signin__newclient__createaccount">CRÉE UN COMPTE</button>
+				<Link to={"/signup"} className="signin__newclient__createaccount">
+					CRÉE UN COMPTE
+				</Link>
 			</div>
 		</div>
 	);
