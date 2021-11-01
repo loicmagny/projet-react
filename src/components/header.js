@@ -4,6 +4,10 @@ import logo from "../assets/img/logo.svg";
 import account from "../assets/img/account.svg";
 import cart from "../assets/img/cart.svg";
 
+function refreshPage() {
+	window.location.reload();
+}
+
 export default function Header(props) {
 	return (
 		<header>
@@ -12,42 +16,36 @@ export default function Header(props) {
 					<li className="navbar__list__logo">
 						<Link to={"/"} className="nav-link">
 							<img src={logo} alt="" />
-							</Link>
-						</li>
-						<li>
-							<Link to={"/"} className="nav-link">
-								Accueil
-							</Link>
-						</li>
-						{/* Ici tout les catalogues pointent vers produits, il faut 
+						</Link>
+					</li>
+					<li>
+						<Link to={"/"} className="nav-link">
+							Accueil
+						</Link>
+					</li>
+					{/* Ici tout les catalogues pointent vers produits, il faut 
 						faire en sorte que la page n'affiche que les produits de la 
 						categorie en question */}
 					<li className="navbar__list__deroulant_declencheur">
-						<span >Catalogue</span>
+						<span>Catalogue</span>
 						<ul className="navbar__list__deroulant">
 							<li className="navbar__list__deroulant__item">
-								<Link to={"/products?category=1"} className="nav-link" >
-									Ordinateurs
+								<Link to={"/products?category=1"} className="nav-link">
+									<p onClick="refreshPage()">Ordinateurs</p>
 								</Link>
 							</li>
 							<li className="navbar__list__deroulant__item">
 								<Link to={"/products?category=2"} className="nav-link">
-									Composants
+									<p onClick="refreshPage()">Composant</p>
 								</Link>
 							</li>
 							<li className="navbar__list__deroulant__item">
 								<Link to={"/products?category=3"} className="nav-link">
-									Peripheriques
+									<p onClick="refreshPage()">Peripheriques</p>
 								</Link>
 							</li>
 						</ul>
 					</li>
-					<li>
-						<Link to={"/config"} className="nav-link">
-							Configtonpc
-						</Link>
-					</li>
-
 					<li>
 						<Link to={"/about"} className="nav-link">
 							A Propos
@@ -62,7 +60,11 @@ export default function Header(props) {
 					</li>
 					<li>
 						<Link to={"/signin"} className="nav__link">
-							<img src={account} alt="" className="navbar__list__logo__second" />
+							<img
+								src={account}
+								alt=""
+								className="navbar__list__logo__second"
+							/>
 						</Link>
 					</li>
 				</ul>

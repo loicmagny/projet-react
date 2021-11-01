@@ -3,16 +3,19 @@
     margin: 0;
     font-size: 0.9rem;
 
-    th{
+    th {
         text-align: center;
     }
+
     td {
         text-align: center;
     }
-    td:not(:nth-child(1)){
+
+    td:not(:nth-child(1)) {
         width: 20%;
     }
-    th:nth-child(2){
+
+    th:nth-child(2) {
         text-align: left;
     }
 
@@ -25,11 +28,14 @@
             }
         }
 
-        &__delete{
-            img{
+        &__delete {
+            
+            img {
+                cursor: pointer;
                 width: 20%
             }
         }
+
         &__item {
             @include flexCol;
             justify-content: space-between;
@@ -43,7 +49,8 @@
                 text-overflow: ellipsis;
                 white-space: nowrap
             }
-            &__name{
+
+            &__name {
                 color: $maincolor;
             }
         }
@@ -64,19 +71,21 @@
     }
 }
 
-.commander{
-    
+.commander {
+
     width: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    button{
+
+    button {
         margin-top: 20%;
         @include button;
     }
 }
-.cartpage{
+
+.cartpage {
     @include flexRow;
     width: 100%;
     margin: 2%;

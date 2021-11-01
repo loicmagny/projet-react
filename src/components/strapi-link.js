@@ -8,10 +8,10 @@ export default function ProductList() {
 	const [loading, setLoading] = useState(true);
 	const [prods, setProds] = useState([]);
 	const queryParams = new URLSearchParams(window.location.search);
-	const [category, setCategory] = useState(0)
+	const [category, setCategory] = useState(0);
+	const [reload, setReload] = useState(true);
 	// console.log(category);
 	console.log(queryParams.get("category"));
-	
 
 	useEffect(() => {
 		if (loading) {
@@ -23,9 +23,8 @@ export default function ProductList() {
 					.finally(() => {
 						setLoading(false);
 					});
-			} else if(queryParams.get("category")) {
-				setCategory(queryParams.get("category"))
-				console.log(category)
+			} else if (queryParams.get("category")) {
+				setCategory(queryParams.get("category"));
 				getAxiosData(`${urlProduct + "?category=" + category}`)
 					.then((resp) => {
 						setProds(resp.data);
@@ -36,7 +35,8 @@ export default function ProductList() {
 			}
 		}
 	}, [category]);
-	console.log(category)
+
+	console.log(category);
 	console.log(prods);
 	return loading ? (
 		<img src={loadingimg} alt="" className="loading" />
