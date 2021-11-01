@@ -50,9 +50,42 @@ async function checkProduct(id, product) {
   }
 }
 
-async function increment(id, quantity) {
+function addCart(prod, count) {
+    if (count == 0) {
+      count = 1
+    }
+    checkProduct(localStorage.getItem('userId'), prod.id).then(data => {
+    if (!data) {
+      const product = {	
+      "user_id": {
+        "id": localStorage.getItem('userId')
+      },
+      "quantity": count,
+      "product": {
+        "id" : prod.id
+      }
+      }
+      try {
+        add(product);
+      }
+      catch(error) {
+        console.log(error);
+      }
+    }
+    else if (data) {
+      increment(data[0].id, data[0].quantity, count);	
+    }
+    }) 	
+}
+
+async function increment(id, quantity, count = 0) {
   try {
-    quantity = quantity + 1;
+    if (count === 0) {
+      quantity = quantity + 1;
+    }
+    else {
+      quantity = quantity + count;
+    }
     return await axios({
       method: 'put',
       url: `${urlCart}/${id}`,
@@ -62,6 +95,8 @@ async function increment(id, quantity) {
       headers: {
         Authorization: 'Bearer ' + localStorage.getItem('userToken')
       }
+    }).then(res => {
+      return res.data;
     })
   }
   catch (error) {
@@ -82,6 +117,8 @@ async function decrement(id, quantity) {
         headers: {
           Authorization: 'Bearer ' + localStorage.getItem('userToken')
         }
+      }).then(res => {
+        return res.data;
       })
     }
     else if (quantity == 0) {
@@ -93,7 +130,6 @@ async function decrement(id, quantity) {
   }
 }
 
-
 async function remove(id) {
   try {
     return await axios({
@@ -102,6 +138,8 @@ async function remove(id) {
       headers: {
         Authorization: 'Bearer ' + localStorage.getItem('userToken')
       }
+    }).then(res => {
+      return res.data;
     })
   }
   catch (error) {
@@ -113,8 +151,10 @@ async function remove(id) {
 
 export default {
   getCart,
+  addCart,
   add,
   checkProduct,
   increment,
   decrement,
+  remove
 };

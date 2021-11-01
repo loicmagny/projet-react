@@ -12,8 +12,7 @@ export default function ProdsCard({ prod }) {
 				className="card__img"/>
 			<div className="card__info">
 				<div className="card__info__text">
-					<p className="card__info__text__title">{prod.title}</p>
-					<p className="card__info__text__price">{prod.price}</p>
+					<p className="card__info__text__price">{prod.price} €</p>
 				</div>
 				<Link to={`products/${prod.id}`} key={prod.id} className="card__info__link">
 					<button className="card__info__link__button">Voir plus</button>

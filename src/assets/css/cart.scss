@@ -3,20 +3,18 @@
     margin: 0;
     font-size: 0.9rem;
 
-    td {
-        text-align: center;
-    }
     th{
         text-align: center;
     }
-    th:nth-child(2){
-        text-align: left;
+    td {
+        text-align: center;
     }
     td:not(:nth-child(1)){
         width: 20%;
     }
-
-    &__names {}
+    th:nth-child(2){
+        text-align: left;
+    }
 
     &__products {
 
@@ -29,9 +27,9 @@
 
         &__delete{
             img{
-                width: 40%
+                width: 25px;
+                cursor: pointer;
             }
-            cursor: pointer;
         }
         &__item {
             @include flexCol;
@@ -48,6 +46,20 @@
             }
             &__name{
                 color: $maincolor;
+            }
+        }
+
+        &__quantity {
+
+            &__value {
+                margin: 0 5%;
+            }
+
+            &__button {
+                @include button();
+                display: inline;
+                padding: 10px;
+                line-height: 0.5em;
             }
         }
     }

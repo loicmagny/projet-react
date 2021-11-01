@@ -16,18 +16,10 @@ margin-bottom: 2%;
         width: 80%;
         @include flexRow();
         justify-content: space-between;
+        align-items: center;
         
         &__text{
             font-weight: bold;
-
-
-            &__title{
-                text-transform: uppercase;
-            }
-
-            &__price{
-
-            }
         }
 
 
