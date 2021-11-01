@@ -43,7 +43,7 @@ export default function Header(props) {
 						</ul>
 					</li>
 					<li>
-						<Link to={"/products"} className="nav-link">
+						<Link to={"/config"} className="nav-link">
 							Configtonpc
 						</Link>
 					</li>

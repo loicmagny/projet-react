@@ -8,6 +8,7 @@ width: 100%;
         position: relative;
         // Parent mis en relatif pour afficher le text sur l'image
         &__img{
+            border-bottom: solid 5px $maincolor;
             width: 100%;
             
         }
@@ -18,8 +19,9 @@ width: 100%;
             margin-top: 10%;
             margin-left: 2%;
             // Marge de positionnement du text
-
+            
             h2{
+                color: $primarybg;
                 font-size: 3rem;
             }
 
@@ -36,7 +38,7 @@ width: 100%;
         @include flexCol;
         text-transform: uppercase;
         padding: 1%;
-        @include bordertop;
+        
         
         &__cards{
             @include flexRow;

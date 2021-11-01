@@ -146,7 +146,7 @@ export default function SoloProd(props) {
 					<p className="singleproduct__content__desc__items__price"> {prod.price} €</p>
 					<div className="singleproduct__content__desc__items__quantity"><button onClick={RemoveCart}>-</button><p>{count ? count : 0}</p><button onClick={AddCart}>+</button></div>
 					<button onClick={()=>{AddCart(); handleNotif()} } className="addcartactiver">Ajouter au panier</button>
-					<AddCartNotif notification={openNotif} setnotification={setOpenNotif}/>
+					<AddCartNotif notification={openNotif} setnotification={setOpenNotif} notifmessage="Votre article a été ajouté au panier"/>
 				</div>		
 			</div>
 		</div>

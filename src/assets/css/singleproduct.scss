@@ -16,6 +16,8 @@
             width: 60%;
             &__main{
                 align-self: flex-start;
+                border-bottom: solid 3px $maincolor;
+                margin-bottom: 1%;
                 & > img{
                     width: 100%;
                     text-align: center;
@@ -24,7 +26,6 @@
             &__second{
                 @include flexRow;
                 & > img{
-                    @include bordertop;
                     width: 20%;
                 }
             }
