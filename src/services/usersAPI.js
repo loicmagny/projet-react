@@ -8,7 +8,6 @@ function register(account) {
         localStorage.setItem('userId', response.data.user.id);
         localStorage.setItem('userToken', response.data.jwt);
         localStorage.setItem('userName', response.data.user.username);
-        axios.defaults.headers["Authorization"] = "Bearer " + localStorage.getItem('userToken');
     });
 }
 

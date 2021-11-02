@@ -7,7 +7,7 @@ class About extends Component {
 				<h2>A propos</h2>
 				<div className="about__map">
 					<h3>Nous trouver</h3>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d882.9068390586153!2d2.3000751412632177!3d49.89106261234059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e784471eaf9929%3A0xb0f88598ff2e1f6b!2s42%20Rue%20des%20Jacobins%2C%2080000%20Amiens!5e0!3m2!1sfr!2sfr!4v1635792804587!5m2!1sfr!2sfr" 
+					<iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d882.9068390586153!2d2.3000751412632177!3d49.89106261234059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e784471eaf9929%3A0xb0f88598ff2e1f6b!2s42%20Rue%20des%20Jacobins%2C%2080000%20Amiens!5e0!3m2!1sfr!2sfr!4v1635792804587!5m2!1sfr!2sfr" 
 					width="800" height="500" loading="lazy"></iframe>
 					<p>Adresse : 45 rue des jacobins, Amiens, 80000</p>
 				</div>

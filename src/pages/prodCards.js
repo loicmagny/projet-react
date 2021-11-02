@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { url, urlProduct, urlCart } from "../functions/globals";
+import { url, urlProduct } from "../functions/globals";
 import cartsAPI from "../services/cartsAPI";
 import loadingimg from "../assets/img/loading.svg";
 import returnimg from "../assets/img/return.svg";
@@ -12,7 +12,6 @@ export default function SoloProd(props) {
 	const [loading, setLoading] = useState(true);
 	const [openNotif, setOpenNotif] = useState(false);
 	const [swapped, Swap] = useState(false);
-	const [render, Rendering] = useState(true);
 	const [count, setCount] = useState(1);
 
 	function SwapImg(i) {
@@ -20,7 +19,6 @@ export default function SoloProd(props) {
 		prod.image[i] = prod.image[0];
 		prod.image[0] = temp;
 		temp = 0;
-		Rendering(false);
 		return true;
 	}
 
@@ -29,7 +27,7 @@ export default function SoloProd(props) {
 	};
 
 	const decrementCount = () => {
-		if (count != 0) {
+		if (count !== 0) {
 			setCount(count - 1);
 		}
 	};

@@ -4,9 +4,6 @@ import logo from "../assets/img/logo.svg";
 import account from "../assets/img/account.svg";
 import cart from "../assets/img/cart.svg";
 
-function refreshPage() {
-	window.location.reload();
-}
 
 export default function Header(props) {
 	return (

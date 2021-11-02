@@ -64,8 +64,11 @@ header{
         &__deroulant_declencheur:hover ul li{
             float: none;
             margin-top: 10%;
+            color: $maincolor;
         }
-
+        &__deroulant_declencheur ul li:hover p{
+            color: $maincolor;
+        }
         // Menu deroulant
 
 

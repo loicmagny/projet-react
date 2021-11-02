@@ -65,7 +65,7 @@ function Home() {
 				<div className="homeSection__content_text__content">
 				<h2>Une souris rapide et sans fils ?</h2>
 				<p>
-				La technologie sans fil <span>LIGHTSPEED</span> vous offre plus de 29 heures d'autonomie et jusqu'à 20 mètres de liberté sans fil fiable.1Susceptible de varier en 
+				La technologie sans fil <span>LIGHTSPEED</span> vous offre plus de 29 heures d'autonomie et jusqu'à 20 mètres de liberté sans fil fiable. Susceptible de varier en 
 				fonction de l'environnement et du mode d'utilisation. Le calcul de l'autonomie de la batterie est basé sur un réglage du volume du casque à 50% et l'éclairage désactivé. Jouez en toute liberté sans la contrainte du câble.
 				 Détendez-vous et immergez-vous dans votre jeu, votre musique, votre film ou tout ce que vous voulez. Soyez libre et jouez à votre manière.
 				</p>

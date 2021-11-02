@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React from "react";
 import checkbox from "../assets/img/cartblank.svg"
 
 export default function AddCartNotif({notification, setnotification,notifmessage}) {
