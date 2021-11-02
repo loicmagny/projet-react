@@ -13,6 +13,7 @@ import Header from "./components/header.js";
 import Footer from "./components/footer.js";
 import Cart from "./pages/cart.js";
 import Products from "./pages/products.js";
+import MyAccount from "./pages/myaccount.js"
 
 export default function App(props) {
 	return (
@@ -31,6 +32,7 @@ export default function App(props) {
 						<Route path="/about" exact component={About} />
 						<Route path="/contact" exact component={Contact} />
 						<Route path="/cart" exact component={Cart} />
+						<Route path="/myaccount" exact component={MyAccount} />
 						<Route
 							path="/products/:slug"
 							exact

@@ -84,3 +84,7 @@ header{
         width: 50%;
     }
 }
+
+.hover p:hover {
+    color: $maincolor;
+}

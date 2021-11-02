@@ -1,0 +1,32 @@
+.myaccount {
+    @include flexCol;
+    width: 100%;
+    height: 50vh;
+    justify-content: space-between;
+
+    & > h2{
+        font-size: bold;
+        text-align: center;
+        margin-bottom: 3%;
+    }
+
+    &__main {
+        @include flexRow;
+        width: 50%;
+        height: 30vh;
+        margin: auto;
+        justify-content: space-between;
+
+        &__title {
+            @include flexCol;
+            padding-top: 2%;
+            justify-content: space-between
+        }
+
+        &__content {
+            @include flexCol;
+            padding-top: 2%;
+            justify-content: space-between
+        }
+    }
+}

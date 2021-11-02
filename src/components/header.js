@@ -58,6 +58,7 @@ export default function Header(props) {
 							<img src={cart} alt="" className="navbar__list__logo__second" />
 						</Link>
 					</li>
+					{localStorage.getItem('userName') == undefined ? 
 					<li>
 						<Link to={"/signin"} className="nav__link">
 							<img
@@ -67,6 +68,14 @@ export default function Header(props) {
 							/>
 						</Link>
 					</li>
+						: 
+					<li className="align">
+					<Link to={"/myaccount"} className="nav__link hover">
+						
+						<p>Bonjour {localStorage.getItem('userName')}</p>
+					</Link>
+					</li>
+						}
 				</ul>
 			</nav>
 		</header>
