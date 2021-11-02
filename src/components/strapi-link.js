@@ -9,8 +9,6 @@ export default function ProductList() {
 	const [prods, setProds] = useState([]);
 	const queryParams = new URLSearchParams(window.location.search);
 	const [category, setCategory] = useState(0);
-	const [reload, setReload] = useState(true);
-	// console.log(category);
 	console.log(queryParams.get("category"));
 
 	useEffect(() => {
@@ -34,10 +32,7 @@ export default function ProductList() {
 					});
 			}
 		}
-	}, [category]);
-
-	console.log(category);
-	console.log(prods);
+	}, [category, loading]);
 	return loading ? (
 		<img src={loadingimg} alt="" className="loading" />
 	) : (

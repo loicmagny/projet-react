@@ -10,7 +10,7 @@ function getCart(id) {
         Authorization: 'Bearer ' + localStorage.getItem('userToken')
       }
     }).then(response => {
-      if (response.data.length != 0) {
+      if (response.data.length !== 0) {
         return response.data;
       }
     })
@@ -40,7 +40,7 @@ async function checkProduct(id, product) {
         Authorization: 'Bearer ' + localStorage.getItem('userToken')
       }
     }).then(response => {
-      if (response.data.length != 0) {
+      if (response.data.length !== 0) {
         return response.data;
       }
     })
@@ -51,7 +51,7 @@ async function checkProduct(id, product) {
 }
 
 function addCart(prod, count) {
-    if (count == 0) {
+    if (count === 0) {
       count = 1
     }
     checkProduct(localStorage.getItem('userId'), prod.id).then(data => {
@@ -121,7 +121,7 @@ async function decrement(id, quantity) {
         return res.data;
       })
     }
-    else if (quantity == 0) {
+    else if (quantity === 0) {
       remove(id);
     }
   }

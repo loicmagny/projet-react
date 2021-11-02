@@ -1,12 +1,11 @@
 // App.js
 
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./pages/home.js";
 import About from "./pages/about.js";
 import Contact from "./pages/contact.js";
 import SignUp from "./pages/signup.js";
-import Config from "./pages/config.js";
 import SoloProd from "./pages/prodCards.js";
 import SignIn from "./pages/signin.js";
 import Header from "./components/header.js";
@@ -28,7 +27,6 @@ export default function App(props) {
 						<Route path="/products?category=3" exact component={Products} />
 						<Route path="/signin" exact component={SignIn} />
 						<Route path="/signup" exact component={SignUp} />
-						<Route path="/config" exact component={Config} />
 						<Route path="/about" exact component={About} />
 						<Route path="/contact" exact component={Contact} />
 						<Route path="/cart" exact component={Cart} />
@@ -43,130 +41,5 @@ export default function App(props) {
 			<Footer />
 			</Router>
 		</>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	);
 }

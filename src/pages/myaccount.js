@@ -45,6 +45,7 @@ function MyAccount() {
                 <p>{account.created_at}</p>
             </div>
             </div>
+            <p>Disconnect</p>
         </div>
     )
     }

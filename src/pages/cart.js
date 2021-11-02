@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, {useEffect, useState } from "react";
 import cartsAPI from "../services/cartsAPI";
 import loadingimg from "../assets/img/loading.svg";
 import { url } from "../functions/globals";
@@ -66,7 +66,7 @@ export default function Cart() {
 						return <tbody>
 							<tr className="cart__products">
 								<td colSpan="1" className="cart__products__img">
-									<img src={`${url}${item.product.image[0].url}`}></img>
+									<img src={`${url}${item.product.image[0].url}`} alt={`${url}${item.product.image[0].description}`}></img>
 								</td>
 								<td colSpan="2.6">
 									<div className="cart__products__item">
