@@ -3,11 +3,13 @@ import { getAxiosData } from "../functions/axiosCall.js";
 import loadingimg from "../assets/img/loading.svg";
 import { urlAccount } from "../functions/globals";
 import axios from "axios";
+import { useHistory } from "react-router";
 
 
 function MyAccount() {
 	const [loading, setLoading] = useState(true);
 	const [account, setAccount] = useState([]);
+    const history = useHistory();
 	
     useEffect(() => {
         if (loading == true) {
@@ -23,6 +25,11 @@ function MyAccount() {
         }
         setLoading(false);
 	}, [])
+
+    const disconnect = () => {
+        localStorage.clear();
+        history.push('/');
+    }
 
     return loading ? (
 		<img src={loadingimg} alt="" className="loading"/>
@@ -45,7 +52,7 @@ function MyAccount() {
                 <p>{account.created_at}</p>
             </div>
             </div>
-            <p>Disconnect</p>
+            <button onClick={disconnect}>Se déconnecter</button>
         </div>
     )
     }
